@@ -1,0 +1,228 @@
+:root {
+    --primary-color: #007bff; 
+    --secondary-color: #333;
+    --text-color: #555;
+    --bg-light: #f8f9fa;
+    --bg-white: #ffffff;
+    --border-color: #e0e0e0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: black;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+header h1 {
+    color: var(--primary-color);
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1500x500/007bff/ffffff?text=TRISTARRPOWERSOLUTIONS+Header') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 40px;
+}
+
+.hero-section h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.about-text, .about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text h2 {
+    color: white;
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.05em;
+}
+
+.about-image img {
+    padding-top: 60px;
+    height: 7.5%;
+    width:65px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slider{
+    position:relative;
+    padding-left: 300px;
+    padding-top: 30px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider img{
+    width: 900px;
+    height: 500px;
+    display: none;
+}
+img.displaySlide{
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.slider {
+    position: relative; /* Important */
+}
+
+@keyframes fade{ 
+    from{opacity: .5;} 
+    to{opacity: 1;} 
+}
+
+.services h2{
+    color: white;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.service-item {
+    background-color: #292929;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.service-item h3 {
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.service-item p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95em;
+    color: #6c6b6b;
+}
+
+.service-item .icon {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.why-choose-us {
+    background-color: rgb(4, 4, 4);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 40px;
+}
+
+.why-choose-us h2 {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.why-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.why-list li {
+    background-color: #333;
+    padding: 20px;
+    border-left: 5px solid var(--primary-color);
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+}
+
+.why-list li strong {
+    color: white;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+@media (max-width: 768px) {
+    .hero-section h2 {
+        font-size: 2.2em;
+    }
+    .hero-section p {
+        font-size: 1em;
+    }
+    .about-content {
+        flex-direction: column;
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}

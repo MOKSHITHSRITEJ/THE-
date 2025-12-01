@@ -1,0 +1,34 @@
+body{
+    background-color: black;
+}
+.navbar {
+  background-color: #333;
+  height:50.4px;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul{
+    color: #FFFFFF;
+    padding: 10px;
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+.nav-links li a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links li a:hover{
+    color: #00ccff;
+    background-color: #333;
+}
